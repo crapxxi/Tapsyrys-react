@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    background-color: #E8EDF4;
+    color: #1A202C;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #C2CCD9 #E8EDF4;
+  }
+  *::-webkit-scrollbar { width: 6px; height: 6px; }
+  *::-webkit-scrollbar-track { background: #E8EDF4; }
+  *::-webkit-scrollbar-thumb { background: #C2CCD9; border-radius: 999px; }
+  *::-webkit-scrollbar-thumb:hover { background: #96A4B6; }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(194,204,217,0.8);
+  }
+
+  .glass-card {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(194,204,217,0.9);
+  }
+
+  .neon-border {
+    border: 1px solid rgba(61,158,61,0.45);
+    box-shadow: 0 0 0 3px rgba(61,158,61,0.1);
+  }
+
+  .accent-border {
+    border: 1px solid rgba(59,130,246,0.4);
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.08);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #2D7A2D 0%, #3D9E3D 60%, #56C156 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-border-card {
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 1rem;
+  }
+  .gradient-border-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(61,158,61,0.4), rgba(59,130,246,0.2), transparent 60%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .surface {
+    background: linear-gradient(160deg, #FFFFFF 0%, #F4F7FC 100%);
+  }
+
+  .hero-glow {
+    background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(61,158,61,0.1) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 50% at 85% 80%, rgba(59,130,246,0.06) 0%, transparent 50%);
+  }
+
+  .stat-number {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+}

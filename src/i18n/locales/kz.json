@@ -1,0 +1,273 @@
+{
+  "common": {
+    "save": "Сақтау",
+    "cancel": "Болдырмау",
+    "delete": "Жою",
+    "confirm": "Растау",
+    "loading": "Жүктелуде…",
+    "search": "Іздеу",
+    "reset": "Тазалау",
+    "all": "Барлығы",
+    "edit": "Өңдеу",
+    "create": "Жасау",
+    "add": "Қосу",
+    "close": "Жабу",
+    "back": "Артқа",
+    "yes": "Иә",
+    "no": "Жоқ",
+    "currency": "₸"
+  },
+  "nav": {
+    "dashboard": "Басты бет",
+    "catalog": "Каталог",
+    "myProducts": "Менің тауарларым",
+    "shopOrders": "Дүкен тапсырыстары",
+    "supplierOrders": "Жеткізуші тапсырыстары",
+    "categories": "Санаттар",
+    "organization": "Ұйым",
+    "login": "Кіру",
+    "register": "Тіркелу",
+    "logout": "Шығу",
+    "role": "Рөл",
+    "allOrganizations": "Барлық ұйымдар"
+  },
+  "allOrgs": {
+    "title": "Барлық ұйымдар",
+    "subtitle": "Әкімші көрінісі — тіркелген барлық ұйымдар",
+    "searchPlaceholder": "Атауы, қаласы немесе түрі бойынша іздеу…",
+    "noResults": "Ұйымдар табылмады",
+    "total": "Барлығы: {{count}}",
+    "table": {
+      "logo": "Логотип",
+      "name": "Атауы",
+      "type": "Түрі",
+      "city": "Қала",
+      "bin": "БСН",
+      "category": "Қызмет саласы",
+      "hasProduct": "Тауарлары бар"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Tapsyrys жүйесіне кіру",
+      "subtitle": "Жеткізушілер мен дүкендерге арналған маркетплейс",
+      "loginData": "Email немесе телефон",
+      "password": "Құпия сөз",
+      "submit": "Кіру",
+      "noAccount": "Аккаунт жоқ па?",
+      "toRegister": "Тіркелу"
+    },
+    "register": {
+      "title": "Аккаунт жасау",
+      "subtitle": "Tapsyrys-ке қосылыңыз",
+      "phone": "Телефон",
+      "email": "Email",
+      "password": "Құпия сөз",
+      "submit": "Тіркелу",
+      "hasAccount": "Аккаунт бар ма?",
+      "toLogin": "Кіру",
+      "success": "Аккаунт жасалды! Жүйеге кіріңіз."
+    }
+  },
+  "dashboard": {
+    "welcome": "Қош келдіңіз",
+    "myProducts": "Менің тауарларым",
+    "shopOrders": "Дүкен тапсырыстары",
+    "supplierOrders": "Жеткізуші тапсырыстары",
+    "catalog": "Каталог",
+    "recentShop": "Соңғы дүкен тапсырыстары",
+    "recentSupplier": "Соңғы жеткізуші тапсырыстары",
+    "noOrders": "Тапсырыстар жоқ",
+    "viewAll": "Барлығы →",
+    "createOrg": "Ұйым жасау",
+    "orgLabel": "Ұйым"
+  },
+  "products": {
+    "title": "Тауарлар каталогы",
+    "subtitle": "Жеткізушілерден іздеңіз және тапсырыс беріңіз",
+    "searchPlaceholder": "Атауы бойынша іздеу…",
+    "allCategories": "Барлық санаттар",
+    "addToCart": "Себетке қосу",
+    "outOfStock": "Қоры жоқ",
+    "inStock": "Қорда: {{count}}",
+    "cart": "Себет",
+    "placeOrder": "Тапсырыс беру",
+    "total": "Барлығы",
+    "orderSuccess": "Тапсырыс сәтті берілді!",
+    "noProducts": "Тауарлар табылмады",
+    "sku": "SKU"
+  },
+  "myProducts": {
+    "title": "Менің тауарларым",
+    "add": "Тауар қосу",
+    "createFirst": "Бірінші тауар қосу",
+    "noProducts": "Тауарлар жоқ",
+    "createOrgFirst": "Алдымен ұйым жасаңыз",
+    "createOrg": "Ұйым жасау",
+    "table": {
+      "product": "Тауар",
+      "sku": "SKU",
+      "category": "Санат",
+      "price": "Баға",
+      "qty": "Саны"
+    },
+    "form": {
+      "name": "Атауы",
+      "sku": "SKU",
+      "price": "Баға (₸)",
+      "count": "Саны",
+      "category": "Санат",
+      "selectCategory": "Санат таңдаңыз",
+      "description": "Сипаттама",
+      "namePlaceholder": "Мысалы, Газдалған су 0.5л",
+      "descriptionPlaceholder": "Тауарды сипаттаңыз…",
+      "image": "Тауар суреті",
+      "imageHint": "Жүктеу үшін басыңыз немесе сүйреп апарыңыз",
+      "imageFormats": "PNG, JPG, WEBP — 5 МБ дейін",
+      "preview": "Алдын ала қарау"
+    },
+    "createTitle": "Тауар қосу",
+    "editTitle": "Тауарды өңдеу",
+    "deleteTitle": "Тауарды жою?",
+    "deleteWarning": "Бұл әрекетті болдырмау мүмкін емес.",
+    "deleteSuccess": "Тауар жойылды",
+    "createSuccess": "Тауар жасалды",
+    "updateSuccess": "Тауар жаңартылды"
+  },
+  "orders": {
+    "shopTitle": "Дүкен тапсырыстары",
+    "shopSubtitle": "Сіздің дүкеніңіз берген тапсырыстар",
+    "supplierTitle": "Жеткізуші тапсырыстары",
+    "supplierSubtitle": "Дүкендерден келген тапсырыстар",
+    "table": {
+      "id": "#",
+      "supplier": "Жеткізуші",
+      "shop": "Дүкен",
+      "date": "Күні",
+      "amount": "Сома",
+      "status": "Күй"
+    },
+    "details": "Мәліметтер",
+    "orderDetails": "Тапсырыс #{{id}}",
+    "cancel": "Тапсырысты болдырмау",
+    "noOrders": "Тапсырыстар жоқ",
+    "changeStatus": "Күйді өзгерту",
+    "orderItems": "Тапсырыс тармақтары",
+    "cancelSuccess": "Тапсырыс болдырылмады",
+    "statusUpdated": "Күй жаңартылды"
+  },
+  "categories": {
+    "title": "Санаттар",
+    "subtitle": "Тауар санаттарын басқару",
+    "add": "Қосу",
+    "namePlaceholder": "Мысалы: Электроника",
+    "nameLabel": "Санат атауы",
+    "noCategories": "Санаттар жоқ",
+    "createSuccess": "Санат жасалды",
+    "id": "ID: {{id}}"
+  },
+  "organization": {
+    "title": "Менің ұйымым",
+    "notFound": "Ұйым табылмады",
+    "notFoundHint": "Жұмысты бастау үшін ұйым жасаңыз",
+    "create": "Ұйым жасау",
+    "createTitle": "Ұйымды тіркеу",
+    "createSubtitle": "Компанияңызды платформада тіркеңіз",
+    "fields": {
+      "name": "Ұйым атауы",
+      "type": "Түрі",
+      "category": "Қызмет саласы",
+      "city": "Қала",
+      "bin": "БСН",
+      "address": "Мекен-жай",
+      "hasProduct": "Тауарлары бар",
+      "orgId": "Ұйым ID",
+      "logo": "Ұйым логотипі"
+    },
+    "typeLabels": {
+      "SUPPLIER": "Жеткізуші",
+      "SHOP": "Дүкен"
+    },
+    "types": ["ЖК", "ЖШС", "АҚ", "Басқа"],
+    "categories": ["Азық-түлік", "Электроника", "Киім", "Құрылыс", "Медицина", "Авто", "Басқа"],
+    "addUser": "Пайдаланушы қосу",
+    "addUserId": "Пайдаланушы телефоны",
+    "management": "Басқару",
+    "info": "Ұйым туралы ақпарат",
+    "productsCount": "Тауарлар",
+    "manageProducts": "Тауарларды басқару →",
+    "createSuccess": "Ұйым жасалды!",
+    "addUserSuccess": "Пайдаланушы қосылды",
+    "adminTitle": "Ұйымдарды басқару",
+    "adminSubtitle": "Ұйымдарды жасау және тізімді басқару"
+  },
+  "home": {
+    "heroTitle": "Tapsyrys",
+    "heroSubtitle": "Қазақстанның жеткізушілері мен дүкендеріне арналған B2B маркетплейс. Делдалсыз көтерме сатылым.",
+    "getStarted": "Тегін бастау",
+    "signIn": "Кіру",
+    "openDashboard": "Панельді ашу",
+    "features": {
+      "catalogTitle": "Тауарлар каталогы",
+      "catalogDesc": "Тексерілген жеткізушілерден актуал бағалармен мыңдаған тауарлар.",
+      "ordersTitle": "Тапсырыстарды басқару",
+      "ordersDesc": "Тапсырыс статустарын нақты уақытта беруден жеткізуге дейін бақылаңыз.",
+      "businessTitle": "Бизнес үшін",
+      "businessDesc": "Компанияңызды тіркеңіз, тауар қосыңыз және бүгін саудаңызды бастаңыз."
+    },
+    "ctaTitle": "Бастауға дайынсыз ба?",
+    "ctaSubtitle": "Тіркелу бір минуттан аз уақыт алады",
+    "ctaButton": "Тіркелу →",
+    "stats": {
+      "suppliers": "Тексерілген жеткізушілер",
+      "products": "Тауарлар",
+      "volume": "Сауда көлемі"
+    },
+    "whyUs": "Неге Tapsyrys?",
+    "whyUsSubtitle": "Қазақстанда көтерме сауда үшін қажет нәрсенің бәрі"
+  },
+  "assignUser": {
+    "title": "Пайдаланушыны ұйымға тіркеу",
+    "subtitle": "Пайдаланушы аккаунтын бар ұйымға байланыстыру",
+    "orgLabel": "Ұйым",
+    "selectOrg": "Ұйымды таңдаңыз…",
+    "userIdLabel": "Пайдаланушы телефоны",
+    "submit": "Тіркеу",
+    "success": "Пайдаланушы ұйымға сәтті тіркелді"
+  },
+  "cart": {
+    "emptyTitle": "Себет бос",
+    "emptySubtitle": "Тапсырыс беру үшін каталогтан тауарлар қосыңыз",
+    "browseCatalog": "Каталогқа өту",
+    "clearAll": "Себетті тазалау",
+    "items": "тауар",
+    "itemsTotal": "себеттегі тауарлар",
+    "suppliers": "жеткізуші",
+    "grandTotal": "Жалпы сома",
+    "orders": "тапсырыс"
+  },
+  "errors": {
+    "generic": "Бір нәрсе дұрыс болмады. Қайталап көріңіз.",
+    "network": "Желі қатесі — байланысты тексеріңіз",
+    "badRequest": "Қате сұраныс. Деректерді тексеріңіз.",
+    "unauthorized": "Сессия аяқталды — жүйеге қайта кіріңіз",
+    "forbidden": "Рұқсат жоқ — рөл жеткіліксіз",
+    "notFound": "Сұралған ресурс табылмады",
+    "conflict": "Қайшылық — бұл ресурс бұрыннан бар",
+    "validation": "Тексеру қатесі. Пішінді тексеріңіз.",
+    "serverError": "Сервер қатесі. Кейінірек қайталаңыз."
+  },
+  "status": {
+    "PENDING": "Күтуде",
+    "CONFIRMED": "Расталды",
+    "PROCESSING": "Өңделуде",
+    "SHIPPING": "Жолда",
+    "DELIVERED": "Жеткізілді",
+    "CANCELLED": "Болдырылмады"
+  },
+  "lang": {
+    "en": "EN",
+    "kz": "KZ",
+    "ru": "RU"
+  }
+}
