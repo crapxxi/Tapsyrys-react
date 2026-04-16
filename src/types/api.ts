@@ -80,6 +80,15 @@ export interface ProductResponse {
   category: CategoryResponse;
 }
 
+// ─── Recommendation ──────────────────────────────────────────────────────────
+
+export interface Recommendation {
+  id: number;
+  name: string;
+  hashtag: string;
+  reason: string;
+}
+
 // ─── Order ───────────────────────────────────────────────────────────────────
 
 export type OrderStatus =

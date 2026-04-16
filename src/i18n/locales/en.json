@@ -246,6 +246,16 @@
     "grandTotal": "Grand total",
     "orders": "orders"
   },
+  "recommendations": {
+    "title": "AI Recommendations",
+    "subtitle": "Personalized picks from our AI for your business",
+    "addToCart": "Add to cart",
+    "orderNow": "Order now",
+    "inCart": "In cart",
+    "outOfStock": "Out of stock",
+    "empty": "No recommendations at the moment",
+    "errorHint": "Could not load recommendations"
+  },
   "errors": {
     "generic": "Something went wrong. Please try again.",
     "network": "Network error — check your connection",
