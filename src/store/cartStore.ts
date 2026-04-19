@@ -33,13 +33,18 @@ export const useCartStore = create<CartStore>()(
           ),
         };
       }
-      return { items: [...state.items, { product, count: 1 }] };
+      // Start at minOrderCount (minimum 1) when first adding
+      const initialCount = Math.max(product.minOrderCount ?? 1, 1);
+      return { items: [...state.items, { product, count: initialCount }] };
     }),
 
   decrementItem: (productId) =>
     set((state) => {
       const existing = state.items.find((i) => i.product.id === productId);
-      if (existing && existing.count <= 1) {
+      if (!existing) return state;
+      const min = Math.max(existing.product.minOrderCount ?? 1, 1);
+      // Remove from cart when decrementing below minOrderCount
+      if (existing.count <= min) {
         return { items: state.items.filter((i) => i.product.id !== productId) };
       }
       return {

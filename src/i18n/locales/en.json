@@ -15,6 +15,8 @@
     "back": "Back",
     "yes": "Yes",
     "no": "No",
+    "more": "Read more",
+    "less": "Show less",
     "currency": "₸"
   },
   "nav": {
@@ -95,7 +97,8 @@
     "total": "Total",
     "orderSuccess": "Order placed successfully!",
     "noProducts": "No products found",
-    "sku": "SKU"
+    "sku": "SKU",
+    "minOrder": "Min. order: {{count}}"
   },
   "myProducts": {
     "title": "My Products",
@@ -116,6 +119,7 @@
       "sku": "SKU",
       "price": "Price (₸)",
       "count": "Count",
+      "minOrderCount": "Min. order qty",
       "category": "Category",
       "selectCategory": "Select category",
       "description": "Description",
@@ -154,7 +158,10 @@
     "changeStatus": "Change status",
     "orderItems": "Order items",
     "cancelSuccess": "Order cancelled",
-    "statusUpdated": "Status updated"
+    "statusUpdated": "Status updated",
+    "deliveryAddress": "Delivery address",
+    "active": "active",
+    "items": "items"
   },
   "categories": {
     "title": "Categories",
@@ -182,7 +189,8 @@
       "address": "Address",
       "hasProduct": "Has products",
       "orgId": "Organization ID",
-      "logo": "Organization Logo"
+      "logo": "Organization Logo",
+      "placementDescription": "Placement description"
     },
     "typeLabels": {
       "SUPPLIER": "Supplier",
@@ -199,7 +207,14 @@
     "createSuccess": "Organization created!",
     "addUserSuccess": "User added",
     "adminTitle": "Organization Management",
-    "adminSubtitle": "Create organizations and manage the registry"
+    "adminSubtitle": "Create organizations and manage the registry",
+    "locationTitle": "Shop Location",
+    "locationSubtitle": "Set your location so nearby suppliers appear in recommendations",
+    "locationClickHint": "Click on the map to pin your shop",
+    "locationClickSub": "Your location will be used for nearby recommendations",
+    "locationNone": "No location set",
+    "saveLocation": "Save Location",
+    "locationSaved": "Location saved"
   },
   "home": {
     "heroTitle": "Tapsyrys",
@@ -248,13 +263,21 @@
   },
   "recommendations": {
     "title": "AI Recommendations",
-    "subtitle": "Personalized picks from our AI for your business",
+    "subtitle": "Personalized picks from AI, TikTok trends, and your area",
     "addToCart": "Add to cart",
-    "orderNow": "Order now",
     "inCart": "In cart",
     "outOfStock": "Out of stock",
     "empty": "No recommendations at the moment",
-    "errorHint": "Could not load recommendations"
+    "errorHint": "Could not load recommendations",
+    "tabAi": "AI",
+    "tabTiktok": "TikTok",
+    "tabOsm": "Near me",
+    "osmClickHint": "Click on the map to set your location",
+    "osmClickSub": "Recommendations will be based on nearby demand",
+    "osmLocation": "Selected location",
+    "osmNoLocation": "No location selected",
+    "osmRadius": "Radius",
+    "osmSearch": "Search"
   },
   "errors": {
     "generic": "Something went wrong. Please try again.",

@@ -93,3 +93,17 @@
     font-feature-settings: 'tnum';
   }
 }
+
+/* ── Leaflet overrides ───────────────────────────────────────────────────────
+   Tailwind base resets img max-width which breaks tile rendering.
+   These rules restore what Leaflet expects.                                  */
+.leaflet-container {
+  font-family: inherit;
+}
+.leaflet-container img.leaflet-tile {
+  max-width: none !important;
+  max-height: none !important;
+}
+.leaflet-pane img {
+  max-width: none !important;
+}

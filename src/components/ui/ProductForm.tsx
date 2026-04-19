@@ -53,7 +53,7 @@ export function ProductForm({
         />
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-3">
         <Input
           label={t('myProducts.form.price')}
           name="basePrice"
@@ -73,6 +73,16 @@ export function ProductForm({
           value={form.count || ''}
           onChange={onChange}
           placeholder="0"
+          required
+        />
+        <Input
+          label={t('myProducts.form.minOrderCount')}
+          name="minOrderCount"
+          type="number"
+          min={1}
+          value={form.minOrderCount || ''}
+          onChange={onChange}
+          placeholder="1"
           required
         />
       </div>

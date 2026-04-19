@@ -16,7 +16,7 @@ import { ProductForm } from '@/components/ui/ProductForm';
 const ICONS = ['📦', '🛒', '🏭', '🥦', '🖥️', '👗', '🚗', '🏠', '💊', '🎮', '🔧', '🍕'];
 
 const emptyProduct: ProductRequest = {
-  name: '', sku: '', basePrice: 0, count: 0, description: '', categoryId: 0,
+  name: '', sku: '', basePrice: 0, count: 0, description: '', categoryId: 0, minOrderCount: 1,
 };
 
 export function CategoriesPage() {
@@ -58,7 +58,7 @@ export function CategoriesPage() {
     setProductForm((prev) => ({
       ...prev,
       [name]:
-        name === 'basePrice' || name === 'count' || name === 'categoryId'
+        name === 'basePrice' || name === 'count' || name === 'categoryId' || name === 'minOrderCount'
           ? Number(value)
           : value,
     }));

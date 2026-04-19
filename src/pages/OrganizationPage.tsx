@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import toast from 'react-hot-toast';
 import { useAuth } from '@/contexts/AuthContext';
-import { useMyOrganization, useAddUserToOrg } from '@/hooks/useOrganization';
+import { useMyOrganization, useAddUserToOrg, useSetOrgLocation } from '@/hooks/useOrganization';
 import { useProductsByOrganization } from '@/hooks/useProducts';
 import { Button } from '@/components/ui/Button';
 import { Modal } from '@/components/ui/Modal';
 import { Input } from '@/components/ui/Input';
 import { ErrorAlert } from '@/components/ui/ErrorAlert';
 import { SkeletonStatCard } from '@/components/ui/Skeleton';
+import { OsmMapPicker } from '@/components/ui/OsmMapPicker';
 
 function InfoRow({ label, value }: { label: string; value: string | number | boolean }) {
   return (
@@ -85,6 +86,7 @@ function MemberOrgView() {
   const { data: org, isLoading, isError } = useMyOrganization();
   const { data: products } = useProductsByOrganization(org?.id ?? 0);
   const { addUser, isLoading: addingUser, isError: addUserErr, error: addUserError } = useAddUserToOrg();
+  const { setLocation, isLoading: savingLocation, isSuccess: locationSaved } = useSetOrgLocation();
   const { user } = useAuth();
   const isAdmin = user?.role === 'ADMIN';
 
@@ -174,6 +176,12 @@ function MemberOrgView() {
             <InfoRow label={t('organization.fields.city')} value={org.city} />
             <InfoRow label={t('organization.fields.address')} value={org.address} />
             <InfoRow label={t('organization.fields.orgId')} value={org.id} />
+            {org.type === 'SHOP' && org.placementDescription && (
+              <div className="sm:col-span-2 flex flex-col gap-0.5 rounded-xl bg-surface-elevated px-4 py-3">
+                <span className="text-xs text-faint">{t('organization.fields.placementDescription')}</span>
+                <span className="text-sm font-medium text-ink">{org.placementDescription}</span>
+              </div>
+            )}
           </div>
         </div>
 
@@ -203,6 +211,41 @@ function MemberOrgView() {
           )}
         </div>
       </div>
+
+      {/* Location section — only for SHOP owners */}
+      {org.type === 'SHOP' && (
+        <div className="rounded-2xl border border-surface-border bg-surface-card p-6">
+          <div className="mb-4 flex items-center gap-3">
+            <div className="flex h-8 w-8 items-center justify-center rounded-xl border border-primary/20 bg-primary/10">
+              <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <h2 className="font-semibold text-ink">{t('organization.locationTitle')}</h2>
+              <p className="text-xs text-faint">{t('organization.locationSubtitle')}</p>
+            </div>
+            {locationSaved && (
+              <span className="ml-auto rounded-full border border-primary/30 bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
+                {t('organization.locationSaved')}
+              </span>
+            )}
+          </div>
+          <OsmMapPicker
+            onSave={(lat, lon) => {
+              setLocation({ lat, lon }, {
+                onSuccess: () => toast.success(t('organization.locationSaved')),
+              });
+            }}
+            isSaving={savingLocation}
+            initialPosition={
+              org.type === 'SHOP' && org.lat && org.lon ? [org.lat, org.lon] : undefined
+            }
+          />
+        </div>
+      )}
 
       {isAdmin && (
         <Modal open={addUserOpen} onClose={() => setAddUserOpen(false)} title={t('organization.addUser')}>

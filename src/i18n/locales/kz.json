@@ -15,6 +15,8 @@
     "back": "Артқа",
     "yes": "Иә",
     "no": "Жоқ",
+    "more": "Толық оқу",
+    "less": "Жию",
     "currency": "₸"
   },
   "nav": {
@@ -95,7 +97,8 @@
     "total": "Барлығы",
     "orderSuccess": "Тапсырыс сәтті берілді!",
     "noProducts": "Тауарлар табылмады",
-    "sku": "SKU"
+    "sku": "SKU",
+    "minOrder": "Мин. тапсырыс: {{count}}"
   },
   "myProducts": {
     "title": "Менің тауарларым",
@@ -116,6 +119,7 @@
       "sku": "SKU",
       "price": "Баға (₸)",
       "count": "Саны",
+      "minOrderCount": "Мин. тапсырыс саны",
       "category": "Санат",
       "selectCategory": "Санат таңдаңыз",
       "description": "Сипаттама",
@@ -154,7 +158,10 @@
     "changeStatus": "Күйді өзгерту",
     "orderItems": "Тапсырыс тармақтары",
     "cancelSuccess": "Тапсырыс болдырылмады",
-    "statusUpdated": "Күй жаңартылды"
+    "statusUpdated": "Күй жаңартылды",
+    "deliveryAddress": "Жеткізу мекен-жайы",
+    "active": "белсенді",
+    "items": "тармақ"
   },
   "categories": {
     "title": "Санаттар",
@@ -182,7 +189,8 @@
       "address": "Мекен-жай",
       "hasProduct": "Тауарлары бар",
       "orgId": "Ұйым ID",
-      "logo": "Ұйым логотипі"
+      "logo": "Ұйым логотипі",
+      "placementDescription": "Орналасу сипаттамасы"
     },
     "typeLabels": {
       "SUPPLIER": "Жеткізуші",
@@ -199,7 +207,14 @@
     "createSuccess": "Ұйым жасалды!",
     "addUserSuccess": "Пайдаланушы қосылды",
     "adminTitle": "Ұйымдарды басқару",
-    "adminSubtitle": "Ұйымдарды жасау және тізімді басқару"
+    "adminSubtitle": "Ұйымдарды жасау және тізімді басқару",
+    "locationTitle": "Дүкен орналасуы",
+    "locationSubtitle": "Орынды белгілеңіз — маңайдағы жеткізушілер ұсыныстарда шығады",
+    "locationClickHint": "Дүкенді белгілеу үшін картаны басыңыз",
+    "locationClickSub": "Орын маңайдағы ұсыныстар үшін қолданылады",
+    "locationNone": "Орын белгіленбеген",
+    "saveLocation": "Сақтау",
+    "locationSaved": "Орын сақталды"
   },
   "home": {
     "heroTitle": "Tapsyrys",
@@ -248,13 +263,21 @@
   },
   "recommendations": {
     "title": "ЖИ ұсыныстары",
-    "subtitle": "Жасанды интеллект сіздің бизнесіңіз үшін таңдаған тауарлар",
+    "subtitle": "ЖИ, TikTok трендтері және маңайыңыз негізіндегі таңдау",
     "addToCart": "Себетке қосу",
-    "orderNow": "Тапсырыс беру",
     "inCart": "Себетте",
     "outOfStock": "Қоры жоқ",
     "empty": "Қазір ұсыныстар жоқ",
-    "errorHint": "Ұсыныстарды жүктеу мүмкін болмады"
+    "errorHint": "Ұсыныстарды жүктеу мүмкін болмады",
+    "tabAi": "ЖИ",
+    "tabTiktok": "TikTok",
+    "tabOsm": "Маңайда",
+    "osmClickHint": "Орынды таңдау үшін картаны басыңыз",
+    "osmClickSub": "Ұсыныстар маңайдағы сұранысқа негізделеді",
+    "osmLocation": "Таңдалған орын",
+    "osmNoLocation": "Орын таңдалмаған",
+    "osmRadius": "Радиус",
+    "osmSearch": "Іздеу"
   },
   "errors": {
     "generic": "Бір нәрсе дұрыс болмады. Қайталап көріңіз.",

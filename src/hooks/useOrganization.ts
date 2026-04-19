@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { organizationService } from '@/services/organizationService';
-import type { OrganizationResponse, RegOrgRequest } from '@/types/api';
+import type { MyOrgResponse, OrganizationResponse, RegOrgRequest } from '@/types/api';
 
 export const orgKeys = {
   all: ['organizations', 'all'] as const,
@@ -17,7 +17,7 @@ export function useAllOrganizations() {
 }
 
 export function useMyOrganization() {
-  const { data, isLoading, isError, error } = useQuery<OrganizationResponse, Error>({
+  const { data, isLoading, isError, error } = useQuery<MyOrgResponse, Error>({
     queryKey: orgKeys.me,
     queryFn: organizationService.getMyOrganization,
     retry: false,
@@ -51,6 +51,23 @@ export function useCreateOrganization() {
     isError: mutation.isError,
     error: mutation.error,
     data: mutation.data,
+  };
+}
+
+export function useSetOrgLocation() {
+  const queryClient = useQueryClient();
+  const mutation = useMutation<void, Error, { lat: number; lon: number }>({
+    mutationFn: ({ lat, lon }) => organizationService.setLocation(lat, lon),
+    onSuccess: () => {
+      void queryClient.invalidateQueries({ queryKey: orgKeys.me });
+    },
+  });
+  return {
+    setLocation: mutation.mutate,
+    isLoading: mutation.isPending,
+    isSuccess: mutation.isSuccess,
+    isError: mutation.isError,
+    error: mutation.error,
   };
 }
 

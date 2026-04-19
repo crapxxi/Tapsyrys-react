@@ -9,6 +9,23 @@ export const productKeys = {
   search: (name: string) => ['products', 'search', name] as const,
 };
 
+/** GET /api/v1/products/?name= — search by name (empty string = all) */
+export function useProductSearch(name: string) {
+  return useQuery<ProductResponse[], Error>({
+    queryKey: ['products', 'search', name],
+    queryFn: () => productService.searchByName(name),
+  });
+}
+
+/** GET /api/v1/products/category?categoryId=&name= */
+export function useProductsByCategory(categoryId: number, name?: string) {
+  return useQuery<ProductResponse[], Error>({
+    queryKey: ['products', 'category', categoryId, name ?? ''],
+    queryFn: () => productService.searchByCategoryAndName(categoryId, name),
+    enabled: categoryId > 0,
+  });
+}
+
 export function useProductsByOrganization(organizationId: number) {
   return useQuery<ProductResponse[], Error>({
     queryKey: productKeys.byOrg(organizationId),

@@ -12,7 +12,7 @@ import { SkeletonRow } from '@/components/ui/Skeleton';
 import { ProductForm } from '@/components/ui/ProductForm';
 
 const emptyForm: ProductRequest = {
-  name: '', sku: '', basePrice: 0, count: 0, description: '', categoryId: 0,
+  name: '', sku: '', basePrice: 0, count: 0, description: '', categoryId: 0, minOrderCount: 1,
 };
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -37,7 +37,7 @@ export function MyProductsPage() {
     const { name, value } = e.target;
     setForm((prev) => ({
       ...prev,
-      [name]: name === 'basePrice' || name === 'count' || name === 'categoryId'
+      [name]: name === 'basePrice' || name === 'count' || name === 'categoryId' || name === 'minOrderCount'
         ? Number(value)
         : value,
     }));
@@ -63,6 +63,7 @@ export function MyProductsPage() {
       count: p.count,
       description: p.description,
       categoryId: p.category.id,
+      minOrderCount: p.minOrderCount ?? 1,
     });
     setImageFile(undefined);
     setImagePreview(p.imageUrl || null);

@@ -1,5 +1,5 @@
 import { apiClient } from '@/lib/axios';
-import type { OrganizationResponse, RegOrgRequest } from '@/types/api';
+import type { MyOrgResponse, OrganizationResponse, RegOrgRequest } from '@/types/api';
 
 export const organizationService = {
   /** POST /api/v1/organizations */
@@ -8,7 +8,7 @@ export const organizationService = {
     const jsonBlob = new Blob([JSON.stringify(data)], {
       type: 'application/json',
     });
-    fd.append('request', jsonBlob);
+    fd.append('data', jsonBlob);
     if (logo) fd.append('logo', logo);
     const response = await apiClient.post<OrganizationResponse>('/api/v1/organizations', fd, {
       headers: { 'Content-Type': 'multipart/form-data' },
@@ -23,8 +23,8 @@ export const organizationService = {
   },
 
   /** GET /api/v1/organizations/me */
-  getMyOrganization: async (): Promise<OrganizationResponse> => {
-    const response = await apiClient.get<OrganizationResponse>('/api/v1/organizations/me');
+  getMyOrganization: async (): Promise<MyOrgResponse> => {
+    const response = await apiClient.get<MyOrgResponse>('/api/v1/organizations/me');
     return response.data;
   },
 
@@ -34,6 +34,11 @@ export const organizationService = {
       `/api/v1/organizations/${organizationId}`,
     );
     return response.data;
+  },
+
+  /** PATCH /api/v1/organizations/location?lat=&lon= */
+  setLocation: async (lat: number, lon: number): Promise<void> => {
+    await apiClient.patch('/api/v1/organizations/location', null, { params: { lat, lon } });
   },
 
   /** PUT /api/v1/organizations/:organizationId/users?phone=... */
